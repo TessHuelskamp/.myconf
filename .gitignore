@@ -24,3 +24,7 @@ out
 
 # work stuff
 *work*
+
+
+.ignore/*
+.vscode/*
