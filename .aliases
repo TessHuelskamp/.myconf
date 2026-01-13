@@ -1,10 +1,11 @@
 # Misc - who knows how these are organized
 # rm quar xattr from downloaded files
 alias dquar=" xattr -d com.apple.quarantine"
-alias ll="ls -althG"
-alias lll="ls -althG@"
+
 # G is mac specifc.
 # May need to make this depend on OS if I ever use linux again :)
+alias ll="ls -althG"
+alias lll="ls -althG@"
 alias ls="ls -G"
 alias lsd="ls -d */"
 alias cp="cp -i"
