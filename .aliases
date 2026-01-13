@@ -68,7 +68,7 @@ export TESS_STICKY=~/Sticky/
 export TESS_SAND=~/Sandbox/
 export TESS_SCREENSHOTS=~/Screenshots/
 export TESS_SCREEN=~/Screenshots/
-export TESS_SCHOOL=~/School/
+export TESS_SCHOOL=~/Dropbox/school
 
 set_loc_alias $TESS_DESK "desk"
 set_loc_alias $TESS_DOWNLOADS "down"
