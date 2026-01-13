@@ -8,17 +8,18 @@ Since this setup is a litle bit different than a normal git setup, you need to u
 
 > Something usually goes wrong here. Good luck :)
 
-1. Clone the git repo onto your computer.
+1. Clone the git repo onto your computer and put your previous dot files into a temp directory.
 
    > You can rm the `separate-git` flag if you don't want to keep things under version control.
 
    `cd ~ && git clone --separate-git-dir=$HOME/.myconf git@github.com:TessHuelskamp/.myconf.git temp`
 
-1. Copy the files you want over into your home directory ( e.g., `cp temp/.aliases ~/.aliases` )
+1. Copy the files you want from the temporary directory into your home directory.
+  * E.g., `cp temp/.aliases ~/.aliases`
 1. Make sure that this line (below) is sourced in your login scripts so git knows how to interact with your home direcotry.
    - `alias config='/usr/bin/git --git-dir=$HOME/.myconf/ --work-tree=$HOME'`
-   > **Note:** This line should already be in your `~/.aliases` file if you copied that over in an earlier step.
-1. `source` the `~/.aliases` file
+   > **Note:** This line may already be in your `~/.aliases` file if you copied that over in an earlier step.
+1. `source` the `~/.aliases` file to get the `config` command into your aliases.
 1. Configure your `config` git directory **not** to show untracked files by default (in this case those untracked files would be the entirity of your home directory :) )
    `config config status.showUntrackedFiles no`
    > **Note:** You'll need to remember to add any new files to this setup (e.g., any new `~/bin/exes` or `~/.configs`) because git won't prompt you to do that.
@@ -31,7 +32,7 @@ I moved all of the aliases from `~/.bash_profile` into `~/.aliases` and had both
 
 > **Note that this setup means that `~/.aliases` should be a terminal node in a `source` tree.** If you mess that up, speaking from experience :p , you'll create an infinite `source` loop that'll block you from logging into an interactive terminal shell :) (If you _do_ create a forever loop you can fix it by running `rm ~/.aliases` from a "New Command" window in `Terminal`)
 
-# General new system TODOs
+# Other new system TODOs
 
 - Terminal configurations
   - Option as a meta key
@@ -39,7 +40,7 @@ I moved all of the aliases from `~/.bash_profile` into `~/.aliases` and had both
 - `defaults write com.apple.screencapture location AN_EXISTING_DIR`
 - Add some desktop pointers to frequenltly used locations
   - `ln -s ~/ScreenShots ~/Desktop`
-  - > Also the Sandbox & Downloads
+  - > Also the Sandbox & Downloads & Dropbox
 - brew
 - Hot corner locks window
   - Put display to sleep
